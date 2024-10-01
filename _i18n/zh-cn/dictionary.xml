@@ -12259,4 +12259,12 @@
   <block id="ec63b8aecacb81cf9705373c2a309a42" category="paragraph">SnapMirror 提供两种类型的数据保护关系。对于每种类型、SnapMirror都会在初始化或更新关系之前为Element源卷创建一个Snapshot副本：</block>
   <block id="064586429a532e66540622ca674c0cd1" category="list-text">在_Disaster Recovery (DR)_数据保护关系中、目标卷仅包含SnapMirror创建的Snapshot副本、当主站点发生灾难时、您可以继续从该副本提供数据。</block>
   <block id="d6dbbbf18fd021df4ecd159f9c136ff2" category="list-text">在_long-term保留_数据保护关系中、目标卷包含由Element软件创建的时间点Snapshot副本以及由SnapMirror创建的Snapshot副本。例如、您可能希望保留在20年内创建的每月Snapshot副本。</block>
+  <block id="c99fba0db719381ede00d894486894a0" category="cell">*存储固件包2.182.0*</block>
+  <block id="f60525d0f867ed7f15f5ebf94bb879df" category="cell">2024年10月17日</block>
+  <block id="40d02a54e5711497609651e0d06eb4ab" category="cell">3B14</block>
+  <block id="c55a468007fe87cc9f913dec692ea9eb" category="cell">4.01.07</block>
+  <block id="9365eb81d2e69739b5c5c0a6bda52315" category="cell">GDC5A02Q</block>
+  <block id="1a9f7cf4eade0ea391d219a7acbeea22" category="cell">11093A10</block>
+  <block id="a789af7a3f0be8e6b5b27e8f2c902f38" category="cell">110B3A10</block>
+  <block id="7a1a50b4f214356238b1fdd7473fb635" category="cell">NAT3.6</block>
 </blocks>
