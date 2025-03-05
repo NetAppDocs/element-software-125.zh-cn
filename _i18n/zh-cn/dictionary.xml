@@ -37,7 +37,6 @@
   <block id="feaada5a395125a755e15c612cc44149" category="list-text">SnapMirror 必须已在 ONTAP 集群上获得许可。</block>
   <block id="6d74735d1f487a7d257b5cf661f166a9" category="list-text">您必须已在 Element 和 ONTAP 集群上配置足够大的卷以处理预期的数据传输。</block>
   <block id="1c9cc74529c9cbdea35027dbfbe10f61" category="list-text">如果您使用的是"`mirrirr-vault"`策略类型、则必须已为要复制的Element Snapshot副本配置SnapMirror标签。</block>
-  <block id="5a02e24a7c331265015a74b6a9baafa6" category="paragraph">您只能在 Element 软件 Web UI 中执行此任务。</block>
   <block id="29092ab8561df9315028f9475d370804" category="list-text">您必须确保端口 5010 可用。</block>
   <block id="ec26990081e21ee38c3e0acab1f5447c" category="list-text">如果您预计可能需要移动目标卷，则必须确保源卷和目标卷之间存在全网状连接。Element 源集群上的每个节点都必须能够与 ONTAP 目标集群上的每个节点进行通信。</block>
   <block id="c3ffc8e078b339d5886703a912ed9b58" category="section-title">支持详细信息</block>
@@ -713,9 +712,7 @@
   <block id="5aacf8a7df58d7f3a894e0e0e6ae3d8f" category="paragraph">您可以启用或禁用 SNMP 。启用 SNMP 后，您可以选择要使用的版本。如果使用版本 2 ，则可以添加请求程序；如果使用版本 3 ，则可以设置 USM 用户。</block>
   <block id="61f39bcca4ea77a73826a2f0c6781250" category="list-text">* SNMP 陷阱设置 *</block>
   <block id="a4edeacf310754a09768eab55b67e3ee" category="paragraph">您可以确定要捕获的陷阱。您可以为每个陷阱接收方设置主机，端口和社区字符串。</block>
-  <block id="1ce256ba457175d5ec9b17ca9bda8cf7" category="summary">从ONTAP 9。4开始、您可以使用ONTAP命令行界面创建关系、此关系使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。</block>
   <block id="5fd75f621e23582f2c44185301f3d0bc" category="doc">创建从 ONTAP 源到 Element 目标的关系</block>
-  <block id="f81df90e6adb12b493329cbbb57e4955" category="paragraph">从ONTAP 9。4开始、您可以使用ONTAP命令行界面创建关系、此关系使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。您可能正在使用 LUN 将数据从 ONTAP 迁移到 Element 软件。</block>
   <block id="be02eee8724cea2420e2adf1d07ddeb5" category="list-text">Element 目标节点必须可供 ONTAP 访问。</block>
   <block id="86c156b8e19cececc124a0c7c1f2bec9" category="list-text">必须已为 Element 卷启用 SnapMirror 复制。</block>
   <block id="671d4984a0edd201ed04cb12a6e7e546" category="paragraph">您必须以的形式指定Element目标路径<block ref="e6c8050b8cd0a398b28edeaa070ef325" prefix=" " category="inline-code"></block>，其中“`LUN`”是实际字符串“`LUN`”，是Element卷的名称。<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block></block>
@@ -727,7 +724,6 @@
   <block id="9a52d6a5d71c5d44563a5e2f1d1fde56" category="paragraph">使用<block ref="8511c2f3ef6c5e8c42a150c01bd8495c" prefix=" " category="inline-code"></block>命令验证是否已创建SnapMirror关系。有关完整的命令语法，请参见手册页。</block>
   <block id="1b8f57d8466ed9be37f7a96ca1ff045e" category="summary">您可以使用 job schedule cron create 命令创建复制作业计划。作业计划用于确定SnapMirror何时自动更新分配了该计划的数据保护关系。</block>
   <block id="6e0983de50056fdacdd9550f613eab0a" category="doc">创建复制作业计划</block>
-  <block id="44baf633dd4bc03a1ab6d0be125c108a" category="paragraph">您可以使用ONTAP命令行界面的命令创建复制作业计划<block ref="859f5842129c4a4759882f44afc53f67" prefix=" " category="inline-code"></block>。作业计划用于确定SnapMirror何时自动更新分配了该计划的数据保护关系。</block>
   <block id="4cd38d835e28dd8e89e58a585a1635ce" category="paragraph">您可以在创建数据保护关系时分配作业计划。如果不分配作业计划，则必须手动更新此关系。</block>
   <block id="30d4f2aeb7b82779c70416788d971465" category="list-text">创建作业计划：</block>
   <block id="81a9fe82fd59a2c04babfe1577b880cc" category="paragraph"><block ref="bedcaa3bb7cb9fb678c133c3f7789c20" prefix="" category="inline-code"></block></block>
@@ -746,7 +742,6 @@
   <block id="df857cb0f08264825fefa55878d286ce" category="paragraph">以下示例将使用默认策略创建统一复制关系<block ref="37e459201e5691c90f616e05271f4ba3" prefix=" " category="inline-code"></block>：</block>
   <block id="97fedbfaebdbcfe68bdc2db0e517c79e" category="paragraph">以下示例将使用策略创建统一复制关系<block ref="4403b8bed8329a1a1ba838d590fec221" prefix=" " category="inline-code"></block>：</block>
   <block id="ea71844b20a2af889daba2027461836d" category="paragraph">以下示例将使用自定义策略创建统一复制关系<block ref="7d06ce743afb94fd7161f90acba5f66a" prefix=" " category="inline-code"></block>：</block>
-  <block id="393cb83f59911d86cb0cc6143a8b8b15" category="summary">您必须先创建 SnapMirror 端点，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。</block>
   <block id="dedd3700704f998555c9779c076f3d9c" category="doc">创建 SnapMirror 端点</block>
   <block id="410d41840bfe4c79d1cbcbad970381ce" category="paragraph">您必须已在 Element 集群上启用 SnapMirror 。</block>
   <block id="1c405d01246cf1ce44f3d2aca78d23b1" category="list-text">单击 * 数据保护 * &gt; * SnapMirror 端点 * 。</block>
@@ -779,7 +774,6 @@
   <block id="20cc35bf4f534abf7c8e15480973e9cf" category="paragraph">以下示例将一个带有SnapMirror标签的规则添加<block ref="2a44471da66622bfc5b82888ae83a7dc" prefix=" " category="inline-code"></block>到自定义策略中<block ref="1d5de0bd3d87489e1362714791579989" prefix=" " category="inline-code"></block>：</block>
   <block id="b0eff705a5813714cb73d5b4afee11b9" category="paragraph">以下示例将一个带有SnapMirror标签的规则添加<block ref="b17c9a947d4e38d7975718380fab6b7a" prefix=" " category="inline-code"></block>到自定义策略中<block ref="d8e87c0927539672f54462c837be0b7f" prefix=" " category="inline-code"></block>：</block>
   <block id="f0f637ca20caa61073cee1a4ce7e8dfc" category="paragraph">然后、您可以从源集群复制与此SnapMirror标签匹配的Snapshot副本：</block>
-  <block id="1110b3c9dda10dccac5a64dacf8b5272" category="summary">您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。</block>
   <block id="28d0537c10dbc179674ef31f5b5a2bab" category="doc">在 Element 集群上启用 SnapMirror</block>
   <block id="c0b5b482ba26a5488d37e9a7bc811294" category="list-text">只能为与 NetApp ONTAP 卷一起使用的 Element 集群启用 SnapMirror 。</block>
   <block id="4afc20f670cf64f0a4b45231ad8a70ba" category="paragraph">默认情况下， Element 系统附带的 SnapMirror 处于禁用状态。在新安装或升级过程中，不会自动启用 SnapMirror 。</block>
@@ -787,7 +781,6 @@
   <block id="446fbff0634d83c1f364b9be13c9b78f" category="list-text">单击 * 集群 * &gt; * 设置 * 。</block>
   <block id="2acc5709a6d4640c6b4f34e06be0bedd" category="list-text">查找 SnapMirror 的集群专用设置。</block>
   <block id="4c76080d9f5f428cf8777ab10d3ad89e" category="list-text">单击 * 启用 SnapMirror* 。</block>
-  <block id="6d42fba9029ac36d49921505785c7e6a" category="summary">您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。</block>
   <block id="98d336445179a80880568e07dde510b1" category="doc">在 Element 源卷上启用 SnapMirror</block>
   <block id="56701c635309a5e65d18a7422b09c3cd" category="list-text">卷块大小必须为 512 字节。</block>
   <block id="b1811edce82ed716d4bc66b1dd1d116f" category="list-text">卷不能参与 Element 远程复制。</block>
@@ -2094,8 +2087,6 @@
   <block id="b456d131470ee117b6ff900f949b80c5" category="paragraph"><block ref="b456d131470ee117b6ff900f949b80c5" category="inline-link-rx"></block></block>
   <block id="0ae5c767cabcaa90f5848cabc66f8aa9" category="inline-link">使用 NetApp HCI ， ONTAP 和融合基础架构构建 Data Fabric</block>
   <block id="1791fd435a83f3ee701165e29bb05b2f" category="list-text"><block ref="1791fd435a83f3ee701165e29bb05b2f" category="inline-link-rx"></block></block>
-  <block id="5865b8968ae6d9762765ab7ce3d35fc2" category="inline-link">在 NetApp Element 软件和 ONTAP 之间进行复制</block>
-  <block id="b00bc340461aac1deb8b1a1e1382cf0c" category="list-text"><block ref="b00bc340461aac1deb8b1a1e1382cf0c" category="inline-link-rx"></block></block>
   <block id="8cb89b387c0217f2060ca414b41c63b2" category="summary">对于 SolidFire 集群，您可以使用空闲时基于软件或硬件的加密对存储在集群上的所有数据进行加密。</block>
   <block id="07134dd620fa410023548b639cca1e69" category="doc">为集群启用和禁用空闲加密</block>
   <block id="b631bf7f00d77eddfcbf6feca367bd11" category="inline-link-macro">基于硬件或软件的空闲加密</block>
@@ -2965,7 +2956,6 @@
   <block id="27f2e04c96b5ac3b10c4de8069658227" category="sidebar">使用组快照进行数据保护</block>
   <block id="cf35d1bd4f63afd1c731729075f91d65" category="sidebar">将卷 ROL 回滚到组快照</block>
   <block id="e9c9178d0dcc22e83ce4dafbccebece2" category="sidebar">配置自定义保护域</block>
-  <block id="42a1881fef50454fa6bd56b43e9ed96e" category="sidebar">在 NetApp Element 软件和 ONTAP 之间进行复制</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
   <block id="24f47cdbe9ddba774a7cc53e51d9032e" category="sidebar">工作流</block>
   <block id="49bd24b89b4d379ec9d1baed92d0973e" category="sidebar">在 Element 软件中启用 SnapMirror</block>
@@ -5219,7 +5209,6 @@
   <block id="ef7c876f00f3acddd00fa671f52d0b1f" category="paragraph">UUID</block>
   <block id="472ec58c29ef9a54cbd559744d4a9c90" category="paragraph">集群的唯一标识符。</block>
   <block id="4ba6dd2d59030fb9ee4b6523df69086c" category="list-text"><block ref="4ba6dd2d59030fb9ee4b6523df69086c" category="inline-link-macro-rx"></block></block>
-  <block id="591c130bf36c26fe5946fac7eeba4c11" category="list-text"><block ref="5858de35bb153f56bdb4f3fbd003b515" category="inline-link-rx"></block>演示文稿]</block>
   <block id="0240dc8e87d832706ecb80b01f87c0a1" category="summary">clusterPair 对象包含与本地集群配对的集群的相关信息。您可以使用 ListClusterPairs 方法检索本地集群的 clusterPair 对象列表。</block>
   <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="paragraph">clusterName</block>
   <block id="3a06c32a878ccae19db7d0f82bd00a47" category="paragraph">对中另一个集群的名称。</block>
@@ -9210,7 +9199,6 @@
   <block id="5ce5a4c32220893139a79b7961ce29a5" category="paragraph">NetApp Element 软件 10.1 及更高版本支持使用 SnapMirror 功能在 ONTAP 系统中复制和还原快照。</block>
   <block id="160c1461d4530203bf5d64f7eb1c0982" category="paragraph">运行 Element 10.1 及更高版本的系统包含可与运行 9.3 或更高版本的 ONTAP 系统上的 SnapMirror 直接通信的代码。Element API 提供了在集群，卷和快照上启用 SnapMirror 功能的方法。此外， Element UI 还提供了用于管理 Element 软件和 ONTAP 系统之间的 SnapMirror 关系的功能。</block>
   <block id="62f54381b903447523bd94d04a2364be" category="paragraph">从 Element 10.3 和 ONTAP 9.4 系统开始，您可以在功能有限的特定使用情形下将源自 ONTAP 的卷复制到 Element 卷。</block>
-  <block id="b3720743bae305bb474d5e403e3739bf" category="paragraph">有关详细信息，请参见 ONTAP 文档。</block>
   <block id="ced6f02fa4444aad2c499194d415578f" category="section-title">用于数据保护的卷快照</block>
   <block id="6335301e7b2b5f151c62c7dad20c7c1d" category="paragraph">卷快照是卷的时间点副本，您可以稍后使用它将卷还原到该特定时间。</block>
   <block id="64ce2a4042bd6dcc85f4453c84c625bd" category="paragraph">虽然快照与卷克隆类似，但快照只是卷元数据的副本，因此您无法挂载或写入这些副本。创建卷快照也只需少量系统资源和空间，因此创建快照的速度比克隆快。</block>
@@ -11566,9 +11554,7 @@
   <block id="76f713176b430a51d8711f47a99d0f8a" category="list-text">将 Element LUN 映射到相应的启动程序组。</block>
   <block id="57b98362a5b6c4d458251e5989a7cddc" category="list-text">创建从 SAN 主机启动程序到 SAN LIF 的 iSCSI 会话。</block>
   <block id="adfba1c6b0a4ee17e069c826350fd982" category="list-text">在 SAN 客户端上，执行存储重新扫描以检测已连接的 LUN 。</block>
-  <block id="130f26f0f55531f4375c1d794340ee1f" category="summary">如果某个关系的默认策略不适用、您可以使用ONTAP命令行界面创建自定义复制策略。</block>
   <block id="75f83bbaf7f814729366d9e0bac3638f" category="doc">创建自定义复制策略</block>
-  <block id="eaf8f20a7ee455b8dc4f49c8782538d9" category="paragraph">使用ONTAP命令行界面创建复制关系时、您可以使用默认策略或自定义策略。对于自定义统一复制策略、您必须定义一个或多个_RERUSE_、以确定初始化和更新期间传输的Snapshot副本。</block>
   <block id="30f6b1249bdeb93367e19f178253fdf9" category="paragraph">如果关系的默认策略不适用，您可以创建自定义复制策略。例如、您可能希望在网络传输中压缩数据、或者修改SnapMirror尝试传输Snapshot副本的次数。</block>
   <block id="1fac572d0bdbbcd92ac120d658648335" category="paragraph">复制策略的 _policy type_ 决定了它支持的关系类型。下表显示了可用的策略类型。</block>
   <block id="551e9178cd3ea95d0d7df735e2e30c6f" category="cell">Policy type</block>
@@ -11870,9 +11856,6 @@
   <block id="a5b2d4de2841c516a54a4c4b3db587b1" category="summary">运行 NetApp Element 软件的系统支持 SnapMirror 功能，可使用 NetApp ONTAP 系统复制和还原快照。</block>
   <block id="908041e9f7dbdfd6dd76e9617f0b3454" category="doc">SnapMirror 概述</block>
   <block id="e132a123dcc09df973758d5a0e1b3ecc" category="paragraph">运行 Element 的系统可以直接与 ONTAP 系统 9.3 或更高版本上的 SnapMirror 进行通信。NetApp Element API提供了在集群、卷和快照上启用SnapMirror功能的方法。此外， Element UI 还提供了管理 Element 软件和 ONTAP 系统之间的 SnapMirror 关系所需的所有功能。</block>
-  <block id="5a5a2d3bbdb5fecdea9055d444ee32af" category="paragraph">您可以在特定使用情形下将 ONTAP 发起的卷复制到 Element 卷，但功能有限。有关详细信息，请参见 ONTAP 文档。</block>
-  <block id="49c8c279b60ab1926e498dd27ba47ce7" category="inline-link">在 Element 软件和 ONTAP 之间进行复制</block>
-  <block id="e01755805869b3d9cedc19fff7c5daae" category="paragraph"><block ref="e01755805869b3d9cedc19fff7c5daae" category="inline-link-rx"></block></block>
   <block id="cd7c96dd340046e8b1a1ed84b73227c0" category="summary">在SolidFire 存储系统中、租户可以使用帐户使客户端能够连接到集群上的卷。您还可以管理 SolidFire 存储系统的集群管理员帐户。</block>
   <block id="d69a8eaf0dfea73cf60506f2c945b71e" category="paragraph">在SolidFire 存储系统中、租户可以使用帐户使客户端能够连接到集群上的卷。创建卷时、卷会分配给特定帐户。您还可以管理 SolidFire 存储系统的集群管理员帐户。</block>
   <block id="0de8022e52b232dc0912129174158b7b" category="list-text"><block ref="0de8022e52b232dc0912129174158b7b" category="inline-link-macro-rx"></block></block>
@@ -12245,12 +12228,10 @@
   <block id="ae5e8801344ab06bde696d2ec863ae4a" category="inline-link">更换发生故障的 H600S 系列节点</block>
   <block id="7001df71000b3cb214f8bfa2979d9be7" category="paragraph"><block ref="7001df71000b3cb214f8bfa2979d9be7" category="inline-link-rx"></block></block>
   <block id="a8c738646fb5eef610f0017f7272a70e" category="summary">您可以使用SnapMirror将Element卷的Snapshot副本复制到ONTAP目标、从而确保Element系统上的业务连续性。</block>
-  <block id="d85808801414821d0bc5b891306017c3" category="doc">NetApp Element 软件和 ONTAP 之间的复制概述</block>
   <block id="564e8ed9dc801e6baa03256281129a07" category="paragraph">您可以使用SnapMirror将Element卷的Snapshot副本复制到ONTAP目标、从而确保Element系统上的业务连续性。如果 Element 站点发生灾难，您可以从 ONTAP 系统向客户端提供数据，然后在服务还原后重新激活 Element 系统。</block>
   <block id="34c547b76ee12c36037c1fbd123f8bb7" category="paragraph">从ONTAP 9。4开始、您可以将在ONTAP节点上创建的LUN的Snapshot副本复制回Element系统。您可能已在 Element 站点发生中断期间创建 LUN ，也可能正在使用 LUN 将数据从 ONTAP 迁移到 Element 软件。</block>
   <block id="f095051bf202432565bd83b13f223cbe" category="paragraph">如果符合以下条件，则应使用 Element 到 ONTAP 备份：</block>
   <block id="41a6f75570e8276bfdd8656708159091" category="list-text">您希望使用最佳实践，而不是浏览每个可用选项。</block>
-  <block id="c8ca568fa4b4ecd54343a9105ffd3d92" category="list-text">您希望使用ONTAP命令行界面(CLI)、而不是Element UI、System Manager、storage/con构想-element-Replication - crea-custom-Replication - policy或自动脚本编写工具。</block>
   <block id="83d990511cbb8a6b72c2da3687386ede" category="list-text">您正在使用 iSCSI 向客户端提供数据。</block>
   <block id="9ae8f55cfebe47cb9ef25253ceb15709" category="paragraph">如果需要其他SnapMirror配置或概念信息，请参见<block ref="ef3dbddea8dbf43683fb89931b6b3d33" category="inline-link-macro-rx"></block>。</block>
   <block id="44d71452635eeaf5c7a210399ae9d66d" category="section-title">关于 Element 和 ONTAP 之间的复制</block>
@@ -12267,4 +12248,31 @@
   <block id="1a9f7cf4eade0ea391d219a7acbeea22" category="cell">11093A10</block>
   <block id="a789af7a3f0be8e6b5b27e8f2c902f38" category="cell">110B3A10</block>
   <block id="7a1a50b4f214356238b1fdd7473fb635" category="cell">NAT3.6</block>
+  <block id="66b9246b0ca9a6c1d9cb4b6b245eb37c" category="inline-link-macro">在NetApp Element软件和ONTAP之间执行复制(ONTAP命令行界面)</block>
+  <block id="ca58c1d1dfb5b23925a5e836cadd440f" category="paragraph">有关详细信息，请参见 <block ref="9fff2b653bf9e5c9e6e296244d407e7a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e02d811196d527520d9f9847ef74439d" category="summary">如果关系的默认策略不适用，您可以创建自定义复制策略。</block>
+  <block id="e7cb3e43a84c97395c30e6e4d68129f7" category="paragraph">您可以在创建复制关系时使用默认策略或自定义策略。对于自定义统一复制策略、您必须定义一个或多个_RERUSE_、以确定初始化和更新期间传输的Snapshot副本。</block>
+  <block id="388657e2af54b4f8e121163ca5784693" category="inline-link-macro">在Element软件和ONTAP之间进行复制(ONTAP命令行界面)</block>
+  <block id="a21a4ab90a18959fa37c0c2fb846d63e" category="paragraph">您可以在特定使用情形下将 ONTAP 发起的卷复制到 Element 卷，但功能有限。有关详细信息，请参见 <block ref="92cf2e7a852a772499cb0000a5d5d5ab" category="inline-link-macro-rx"></block>。</block>
+  <block id="188377347aeb6413e806e53020555d56" category="doc">在NetApp Element软件和ONTAP概述(ONTAP命令行界面)之间执行复制</block>
+  <block id="1435e27f40347998b5c763bcc4df6b63" category="list-text">您希望使用 ONTAP 命令行界面（ CLI ），而不是 System Manager 或自动化脚本编写工具。</block>
+  <block id="ffcff48a8900b759122138dc74affc48" category="inline-link-macro">Element软件Web UI</block>
+  <block id="faa03ad90cfa8dd02ce4f68b832e5926" category="inline-link-macro">API 方法</block>
+  <block id="f3fde60a3a60d61f5adcdf60b79d244d" category="paragraph">您只能在或中使用执行此任务<block ref="b93072557c65ffea9f42510ec69c2114" category="inline-link-macro-rx"></block><block ref="887e50fc0bb5d7d97f152ed649a55cbc" category="inline-link-macro-rx"></block>。</block>
+  <block id="1743b8faf2fcec8ea2fed428a3ba2746" category="summary">从ONTAP 9。4开始、您可以使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。</block>
+  <block id="4a564490593b9dfe3a2ce1d2fff04fe4" category="paragraph">从ONTAP 9。4开始、您可以使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。您可能正在使用 LUN 将数据从 ONTAP 迁移到 Element 软件。</block>
+  <block id="77f7f7ae06760be21bad1e934698a2b6" category="paragraph">您可以使用<block ref="859f5842129c4a4759882f44afc53f67" prefix=" " category="inline-code"></block>命令创建复制作业计划。作业计划用于确定SnapMirror何时自动更新分配了该计划的数据保护关系。</block>
+  <block id="ec584e493ebc5976220074c48288215d" category="summary">您必须先创建 SnapMirror 端点，然后才能创建复制关系。您只能在Element软件Web UI中或使用API方法执行此任务。</block>
+  <block id="9c792937f37fdf96fa76e6e64ade3121" category="paragraph">您必须先创建 SnapMirror 端点，然后才能创建复制关系。您只能在或中使用执行此任务<block ref="b93072557c65ffea9f42510ec69c2114" category="inline-link-macro-rx"></block><block ref="9641b9cb3efec10f08ee0a17e27a64d6" category="inline-link-macro-rx"></block>。</block>
+  <block id="2914b577684d6c7f339e6fda22c3487f" category="summary">您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用API方法执行此任务。</block>
+  <block id="c229b2f8b428f342bff7cf24ff75f1b2" category="inline-link-macro">API 方法</block>
+  <block id="0b8667f1f4456982a27ec231d1a84da6" category="paragraph">您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用执行此任务<block ref="08aeb663b3e636fd7806da6cd0761563" category="inline-link-macro-rx"></block>。</block>
+  <block id="58d35ba486cdacfc31e43fd6a58950a7" category="summary">您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用API方法执行此任务。</block>
+  <block id="5d2e361c0914a6964545e53b54120709" category="paragraph">您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用和<block ref="50b3ddadfbe173a030d079ab859844eb" category="inline-link-macro-rx"></block>API方法执行此任务<block ref="ed0492a679a5ccbd40bf302baf82a4fe" category="inline-link-macro-rx"></block>。</block>
+  <block id="2338f7e5e83af8d305777617f7d4cf8d" category="paragraph">在将目标卷设为可写之后，在因源卷和目标卷上不存在通用 Snapshot 副本而导致更新失败之后，或者如果要更改此关系的复制策略，则需要重新同步复制关系。</block>
+  <block id="6d5f69495f8e867162efa46a43db438e" category="list-text">重新同步源卷和目标卷：</block>
+  <block id="d6f79eadbe284e92f33838a69bd8773e" category="paragraph"><block ref="a49916945de69e088fe119f58d0d86bf" prefix="" category="inline-code"></block></block>
+  <block id="6af23f20bfbdb73aca33a4deb42fc5b5" category="paragraph">以下示例将重新同步IP地址10.0.0.11处的源卷与上的目标<block ref="e4682d2fda48014167b71e8800297170" prefix=" " category="inline-code"></block>卷之间的<block ref="f2dcd1c21dd6e00e42ff4b9467c5e011" prefix=" " category="inline-code"></block>关系<block ref="d39934ce111a864abf40391f3da9cdf5" prefix=" " category="inline-code"></block>：</block>
+  <block id="6ee6e98dd3f706a9d56d48dbe0b25dcb" category="doc">在Element和ONTAP集群之间使用SnapMirror复制(Element UI)</block>
+  <block id="90bed928a242a5706586c0d57bf0fdd4" category="list-text"><block ref="90bed928a242a5706586c0d57bf0fdd4" category="inline-link-macro-rx"></block></block>
 </blocks>

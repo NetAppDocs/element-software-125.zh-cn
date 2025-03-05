@@ -1,7 +1,7 @@
 ---
 permalink: storage/task-element-replication-define-rule-policy.html 
 sidebar: sidebar 
-keywords: define, rule, policy 
+keywords: ontap, cli, define, rule, policy 
 summary: '对于策略类型为"镜像 存储"的自定义策略、必须至少定义一个规则来确定初始化和更新期间传输的Snapshot副本。您还可以为默认策略定义 " 镜像 - 存储 " 策略类型的规则。' 
 ---
 = 为策略定义规则

@@ -1,7 +1,7 @@
 ---
 permalink: storage/task-element-replication-reactivate-original-source-volume.html 
 sidebar: sidebar 
-keywords: reactivate. original, source, volume 
+keywords: ontap, cli, reactivate, original, source, volume 
 summary: 当您不再需要从目标提供数据时，可以在源卷和目标卷之间重新建立初始数据保护关系。 
 ---
 = 重新激活原始源卷

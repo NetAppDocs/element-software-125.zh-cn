@@ -1,8 +1,8 @@
 ---
 permalink: storage/task-element-replication-enable-snapmirror-cluster.html 
 sidebar: sidebar 
-keywords: enable, snapmirror, element, cluster 
-summary: 您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。 
+keywords: ontap, cli, enable, snapmirror, element, cluster 
+summary: 您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用API方法执行此任务。 
 ---
 = 在 Element 集群上启用 SnapMirror
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须先在 Element 集群上启用 SnapMirror ，然后才能创�
 
 
 [role="lead"]
-您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。
+您必须先在 Element 集群上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用执行此任务link:../api/reference_element_api_enablefeature.html["API 方法"]。
 
 .开始之前
 * Element 集群必须运行 NetApp Element 软件 10.1 或更高版本。

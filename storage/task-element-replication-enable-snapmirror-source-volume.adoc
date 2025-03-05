@@ -2,7 +2,7 @@
 permalink: storage/task-element-replication-enable-snapmirror-source-volume.html 
 sidebar: sidebar 
 keywords: enable, snapmirror, element, source, volume 
-summary: 您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。 
+summary: 您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用API方法执行此任务。 
 ---
 = 在 Element 源卷上启用 SnapMirror
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须先在 Element 源卷上启用 SnapMirror ，然后才能创�
 
 
 [role="lead"]
-您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在 Element 软件 Web UI 中执行此任务。
+您必须先在 Element 源卷上启用 SnapMirror ，然后才能创建复制关系。您只能在Element软件Web UI中或使用和link:../api/reference_element_api_modifyvolumes.html["ModifyVolumes"]API方法执行此任务link:../api/reference_element_api_modifyvolume.html["ModifyVolume"]。
 
 .开始之前
 * 您必须已在 Element 集群上启用 SnapMirror 。

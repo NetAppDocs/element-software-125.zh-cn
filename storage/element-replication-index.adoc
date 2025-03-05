@@ -1,10 +1,10 @@
 ---
 permalink: storage/element-replication-index.html 
 sidebar: sidebar 
-keywords: decide, replication, netapp element software, ontap, business continuity, element, system, snapmirror, replicate, snapshot, copies, volume 
+keywords: ontap, cli, replication, element, software, ontap, business continuity, snapmirror, replicate, snapshot, copies, volume 
 summary: 您可以使用SnapMirror将Element卷的Snapshot副本复制到ONTAP目标、从而确保Element系统上的业务连续性。 
 ---
-= NetApp Element 软件和 ONTAP 之间的复制概述
+= 在NetApp Element软件和ONTAP概述(ONTAP命令行界面)之间执行复制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,7 +18,7 @@ summary: 您可以使用SnapMirror将Element卷的Snapshot副本复制到ONTAP�
 如果符合以下条件，则应使用 Element 到 ONTAP 备份：
 
 * 您希望使用最佳实践，而不是浏览每个可用选项。
-* 您希望使用ONTAP命令行界面(CLI)、而不是Element UI、System Manager、storage/con构想-element-Replication - crea-custom-Replication - policy或自动脚本编写工具。
+* 您希望使用 ONTAP 命令行界面（ CLI ），而不是 System Manager 或自动化脚本编写工具。
 * 您正在使用 iSCSI 向客户端提供数据。
 
 
@@ -145,7 +145,7 @@ Element 卷大致相当于 ONTAP LUN 。初始化 Element 软件和 ONTAP 之间
 +
 [NOTE]
 ====
-您只能在 Element 软件 Web UI 中执行此任务。
+您只能在或中使用执行此任务link:concept_snapmirror_labels.html["Element软件Web UI"]link:../api/concept_element_api_snapshots_overview.html["API 方法"]。
 
 ====
 * 您必须确保端口 5010 可用。

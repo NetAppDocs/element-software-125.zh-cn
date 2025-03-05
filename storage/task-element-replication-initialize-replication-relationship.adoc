@@ -1,7 +1,7 @@
 ---
 permalink: storage/task-element-replication-initialize-replication-relationship.html 
 sidebar: sidebar 
-keywords: initialize, replication, relationship 
+keywords: ontap, cli, initialize, replication, relationship 
 summary: 对于所有关系类型、初始化都会执行基线传输：它会为源卷创建一个Snapshot副本、然后将该副本及其引用的所有数据块传输到目标卷。 
 ---
 = 初始化复制关系
@@ -17,6 +17,12 @@ summary: 对于所有关系类型、初始化都会执行基线传输：它会�
 * 包含要复制的卷的 Element 节点必须可供 ONTAP 访问。
 * 必须已为 Element 卷启用 SnapMirror 复制。
 * 如果您使用的是"`mirrirr-vault"`策略类型、则必须已为要复制的Element Snapshot副本配置SnapMirror标签。
++
+[NOTE]
+====
+您只能在或中使用执行此任务link:concept_snapmirror_labels.html["Element软件Web UI"]link:../api/concept_element_api_snapshots_overview.html["API 方法"]。
+
+====
 
 
 .关于此任务

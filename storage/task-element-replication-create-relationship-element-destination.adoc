@@ -2,7 +2,7 @@
 permalink: storage/task-element-replication-create-relationship-element-destination.html 
 sidebar: sidebar 
 keywords: ontap, cli, create, relationship, replication, snapmirror 
-summary: 从ONTAP 9。4开始、您可以使用ONTAP命令行界面创建关系、此关系使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。 
+summary: 从ONTAP 9。4开始、您可以使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。 
 ---
 = 创建从 ONTAP 源到 Element 目标的关系
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 从ONTAP 9。4开始、您可以使用ONTAP命令行界面创建关系�
 
 
 [role="lead"]
-从ONTAP 9。4开始、您可以使用ONTAP命令行界面创建关系、此关系使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。您可能正在使用 LUN 将数据从 ONTAP 迁移到 Element 软件。
+从ONTAP 9。4开始、您可以使用SnapMirror将在ONTAP源上创建的LUN的Snapshot副本复制回Element目标。您可能正在使用 LUN 将数据从 ONTAP 迁移到 Element 软件。
 
 .开始之前
 * Element 目标节点必须可供 ONTAP 访问。

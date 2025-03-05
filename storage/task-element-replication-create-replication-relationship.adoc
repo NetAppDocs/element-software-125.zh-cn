@@ -1,7 +1,7 @@
 ---
 permalink: storage/task-element-replication-create-replication-relationship.html 
 sidebar: sidebar 
-keywords: element, ui, create, relationship, element, source, ontap, destination 
+keywords: element, ui, create, relationship, element, source, ontap, destination, cli 
 summary: 您可以使用SnapMirror将Element卷的Snapshot副本复制到ONTAP目标系统。如果 Element 站点发生灾难，您可以从 ONTAP 系统向客户端提供数据，然后在服务还原后重新激活 Element 源卷。 
 ---
 = 创建从 Element 源到 ONTAP 目标的关系
@@ -22,7 +22,7 @@ summary: 您可以使用SnapMirror将Element卷的Snapshot副本复制到ONTAP�
 +
 [NOTE]
 ====
-您只能在 Element 软件 Web UI 中执行此任务。
+您只能在或中使用执行此任务link:concept_snapmirror_labels.html["Element软件Web UI"]link:../api/concept_element_api_snapshots_overview.html["API 方法"]。
 
 ====
 
